@@ -2,26 +2,45 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
+## Get started
+
+Run `npm install` to install dependencies
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Chart Library
+For chart has been used [Highchart](https://www.highcharts.com/), in particular its Angular wrapper [Highcharts-Angular](https://github.com/highcharts/highcharts-angular).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Architecture
 
-## Build
+Due the time limitation, I've developed a single page containing all charts. I've decided to split the pages into `components` ( dummy UI components ) and `containers` ( smart component that handle the data).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`Components`:
+- Header
+- Footer
+- Chart: wrapper for highchart component
 
-## Running unit tests
+`Containers`
+- Charts: where JSON file is read and chart option data is build
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I've created 2 services that handle the HTTP call and transform data for chart object
 
-## Running end-to-end tests
+- `ApiService`: handle the HTTP call to read the JSON file
+- `ChartService`: transform data to build chart configuration options
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Responsive
+The responsive is managed using `css grid` features
 
-## Further help
+## Improvements and future development
+Due the time restriction, I kept the page and the structure very simple and minimal.
+For future improvements, I'd do the following
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Structure application using angular modules
+- Add a loading spinner
+- Improve chart readability adding more properties like description or anything that could add meaning to it
+- Add a chart detail page, where user can display 1 single chart with more detailed description
+- Add a select to allow user to choice which type of chart he wants to display (for example `area` rather than `line`)
+- Add some unit test
+- Fix style in header and footer

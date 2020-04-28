@@ -1,0 +1,10 @@
+<div class="charts">
+  <app-chart
+  [ngStyle]="{
+    'justify-self': 'center',
+    'aling-self': 'center'
+  }"
+    *ngFor="let chart of chartsArray"
+    [options]="chart"
+  ></app-chart>
+</div>
