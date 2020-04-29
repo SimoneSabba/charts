@@ -1,9 +1,16 @@
 @import '../../variables';
 
-header {
+.header {
   grid-area: header;
   height: 100%;
   font-size: 1.4em;
-  background-color: $bgColor;
-  color: white;
+  
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__toolbar {
+    background-color: $bgColor;
+    color: white;
+  }
 }
