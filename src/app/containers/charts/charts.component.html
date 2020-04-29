@@ -4,7 +4,7 @@
     'justify-self': 'center',
     'aling-self': 'center'
   }"
-    *ngFor="let chart of chartsArray"
+    *ngFor="let chart of charts$ | async"
     [options]="chart"
   ></app-chart>
 </div>
