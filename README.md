@@ -17,6 +17,9 @@ For chart has been used [Highchart](https://www.highcharts.com/), in particular 
 
 Due the time limitation, I've developed a single page containing all charts. I've decided to split the pages into `components` ( dummy UI components ) and `containers` ( smart component that handle the data).
 
+`Modules`:
+- MaterialModule: export Angular Material modules used in the application
+
 `Components`:
 - Header
 - Footer
@@ -38,7 +41,6 @@ Due the time restriction, I kept the page and the structure very simple and mini
 For future improvements, I'd do the following
 
 - Structure application using angular modules
-- Add a loading spinner
 - Improve chart readability adding more properties like description or anything that could add meaning to it
 - Add a chart detail page, where user can display 1 single chart with more detailed description
 - Add a select to allow user to choice which type of chart he wants to display (for example `area` rather than `line`)
