@@ -1,10 +1,16 @@
 <div class="charts">
-  <app-chart
-  [ngStyle]="{
-    'justify-self': 'center',
-    'aling-self': 'center'
-  }"
-    *ngFor="let chart of charts$ | async"
-    [options]="chart"
-  ></app-chart>
-</div>
+  <ng-template #showSpinner>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </ng-template>
+  
+  <ng-container *ngIf="charts$ | async as charts; else showSpinner">
+    <app-chart
+      [ngStyle]="{
+        'justify-self': 'center',
+        'aling-self': 'center'
+      }"
+        *ngFor="let chart of charts"
+        [options]="chart"
+      ></app-chart>
+    </ng-container>
+  </div>
