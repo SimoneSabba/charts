@@ -10,7 +10,7 @@ import * as Highcharts from 'highcharts';
 
 export class ChartComponent implements OnInit {
   @Input() options: Highcharts.Options;
-  @Input() type: string;
+  @Input() description: string;
   Highcharts: typeof Highcharts = Highcharts;
 
   constructor() { }

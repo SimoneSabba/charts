@@ -7,8 +7,8 @@ import { DataModel } from '../interfaces/dataModel.interface';
 export class ChartService {
 
   constructor() { }
-  buildOptions(item: DataModel): Highcharts.Options {
-    return {
+  buildOptions(item: DataModel): DataModel {
+    const chartOptions: Highcharts.Options = {
       title: {
         text: item.title
       },
@@ -19,6 +19,10 @@ export class ChartService {
         data: item.chart,
         type: 'line'
       }]
+    }
+    return {
+      ...item,
+      chartOptions
     }
   }
 }

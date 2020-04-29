@@ -10,7 +10,8 @@
         'aling-self': 'center'
       }"
         *ngFor="let chart of charts"
-        [options]="chart"
+        [options]="chart.chartOptions"
+        [description]="chart.description"
       ></app-chart>
     </ng-container>
   </div>

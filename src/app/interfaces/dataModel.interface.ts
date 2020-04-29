@@ -10,6 +10,7 @@ export interface DataModel {
   url: string,
   description: string,
   chart: chartData[],
+  chartOptions?: Highcharts.Options,
 }
 
 export interface ApiResponse {

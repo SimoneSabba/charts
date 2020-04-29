@@ -13,13 +13,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class ChartsComponent implements OnInit {
   
-  chartOptions2: Highcharts.Options = {
-    series: [{
-      type: 'line'
-    }]
-  };
-  
-  charts$: Observable<Highcharts.Options[]>;
+  charts$: Observable<DataModel[]>;
   
 
   constructor(
