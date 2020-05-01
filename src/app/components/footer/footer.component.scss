@@ -1,9 +1,13 @@
 @import '../../variables';
 
-footer {
-  grid-area: footer;
+.footer {
   height: 100%;
   background-color: $bgColor;
   color: white;
-  padding: 15px;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-left: 5px;
+  }
 }

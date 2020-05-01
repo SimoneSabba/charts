@@ -5,10 +5,6 @@
   
   <ng-container *ngIf="charts$ | async as charts; else showSpinner">
     <app-chart
-      [ngStyle]="{
-        'justify-self': 'center',
-        'aling-self': 'center'
-      }"
         *ngFor="let chart of charts"
         [options]="chart.chartOptions"
         [description]="chart.description"
